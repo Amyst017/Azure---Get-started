@@ -22,7 +22,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.WindowsAzure.Storage.File;
 using Microsoft.WindowsAzure.Storage.File.Protocol;
 using Microsoft.WindowsAzure.Storage.Shared.Protocol;
 
@@ -195,7 +194,7 @@ namespace FileStorage
             {
                 // Revert back to original service properties
                 Console.WriteLine("Revert back to original service properties");
-                await fileClient.SetServicePropertiesAsync(originalProperties);
+                //await fileClient.SetServicePropertiesAsync(originalProperties);
             }
             Console.WriteLine();
         }

@@ -404,13 +404,13 @@ namespace FileStorage
 
                 // Delete the file with the ranges in it.
                 cloudFile = fileDirectory.GetFileReference(destFile);
-                await cloudFile.DeleteIfExistsAsync();
+                //await cloudFile.DeleteIfExistsAsync();
 
                 Console.WriteLine("Deleting the directory on the file share.");
 
                 // Delete the directory.
                 bool success = false;
-                success = await fileDirectory.DeleteIfExistsAsync();
+                //success = await fileDirectory.DeleteIfExistsAsync();
                 if (success)
                 {
                     Console.WriteLine("    Directory on the file share deleted successfully.");
@@ -423,7 +423,7 @@ namespace FileStorage
                 Console.WriteLine("Deleting the file share.");
 
                 // Delete the share.
-                await cloudFileShare.DeleteAsync();
+                //await cloudFileShare.DeleteAsync();
                 Console.WriteLine("    Deleted the file share successfully.");
 
                 Console.WriteLine("Deleting the temporary download directory and the file in it.");
@@ -433,8 +433,8 @@ namespace FileStorage
                 Console.WriteLine("    Successfully deleted the temporary download directory.");
 
                 Console.WriteLine("Deleting the container and blob used in the Copy/Abort test.");
-                await targetBlob.DeleteIfExistsAsync();
-                await cloudBlobContainer.DeleteIfExistsAsync();
+                //await targetBlob.DeleteIfExistsAsync();
+                //await cloudBlobContainer.DeleteIfExistsAsync();
                 Console.WriteLine("    Successfully deleted the blob and its container.");
 
             }
